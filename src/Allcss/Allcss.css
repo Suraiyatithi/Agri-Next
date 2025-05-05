@@ -1,0 +1,8 @@
+.background {
+    /* background-image: url('your-image.jpg'); */
+    background-size: cover;
+    background-attachment: fixed;
+    /* height: 100vh; */
+    width: 100%;
+    /* overflow-y: auto; Adds a scrollbar if the content exceeds the viewport height */
+  }
