@@ -97,7 +97,7 @@ const Header = () => {
                                     <span className='text-gray-800 font-semibold'>$150.00</span>
                                 </p>
                             </div> */}
-                              <div className="flex border-2 font-medium text-lg rounded-full px-4 py-2 border-yellow-700 items-center gap-2 cursor-pointer hover:text-lime-600">
+                              <div className="flex border-2 font-medium text-lg rounded-full px-4 py-2 border-lime-800 items-center gap-2 cursor-pointer hover:text-lime-600">
                                                                     <FaUser />
                                                                     <p>Login</p>
                                                                 </div>

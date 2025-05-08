@@ -10,12 +10,12 @@ const InfoBottom = () => {
     {
       bg: `url(${img2})`,
       text: 'Empowering Farmers',
-      des: 'Our main goal is to empower the farmer who lives in the village and does not get enough facilities.A country is fully dependent on farming, as people cannot live without food.',
+      des: 'Our main goal is to empower the farmer who lives in the village whom do not get facilities and does not get enough facilities.A country is fully dependent on farming, as people cannot live without food.',
     },
     {
       bg: `url(${img3})`,
       text: 'Smart Agriculture Solutions',
-      des: 'Smart farming can bring the best results in agriculture, where users can get a lot of benefits.Our main goal is to empower the farmer who lives in the village and does not get enough facilities.',
+      des: 'Smart farming can bring the best results in agriculture,work smartly, where users can get a lot of benefits.Our main goal is to empower the farmer who lives in the village and does not get enough facilities.',
     },
     {
       bg: `url(${img4})`,
@@ -34,11 +34,11 @@ const InfoBottom = () => {
         className=" bg-cover  bg-center flex flex-col items-center justify-center text-white text-2xl font-bold transition-all duration-700 p-4"
         style={{ backgroundImage: slides[current].bg }}
       >
-        <div className=" bg-opacity-50 p-3 rounded mb-3 w-full text-center">
-          {slides[current].text}
+        <div className=" bg-opacity-50 p-3 rounded text-2xl  w-full mt-8 text-center">
+         <h4> {slides[current].text}</h4>
         </div>
-        <div className="bg-opacity-40 p-2 rounded mb-4 text-sm font-normal text-center">
-          {slides[current].des}
+        <div className="bg-opacity-40 p-8 text-xl rounded   font-normal text-center mb-8">
+          <p>{slides[current].des}</p>
         </div>
 
         {/* Slide Buttons */}

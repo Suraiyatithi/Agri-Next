@@ -1,79 +1,93 @@
+
+
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { FaCheckCircle } from 'react-icons/fa';
 import img1 from '../assets/main-icon-leaf.png';
 
 const ChooseUs = () => {
-    const { scrollY } = useScroll();
-    const y = useTransform(scrollY, [0, 300], [0, -20]);
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 300], [0, -20]);
 
-    return (
-        <div className="flex w-full min-h-screen">
-            {/* Left Part: 2/5 width with animation */}
-            <motion.div style={{ y }} className="w-2/5 relative">
-                <img
-                    src="https://i.ibb.co.com/BKvT8myM/agriculture-healthy-food-23-2151969814.jpg"
-                    alt="Why Choose Us"
-                    className="w-full h-full object-cover m-10 p-10"
-                />
-                {/* https://i.ibb.co.com/j96N5Swz/pexels-photo-693857.webp */}
-                {/* Overlay Message */}
-                <div className="absolute m-7 mb-10 top-4 left-4 bg-yellow-700 bg-opacity-60 text-white p-12 rounded">
-                    <h3 className="text-2xl font-semibold mb-3">Trusted by Farmers</h3>
-                    <p className="text-md">Empowering agriculture through <br /> technology .Our agriculture is <br /> one of the main components <br /> of our live</p>
-                </div>
-            </motion.div>
+  return (
+    <div className="flex flex-col lg:flex-row w-full min-h-screen bg-[#f9f9f7]">
+      
+      {/* Left Section */}
+      <motion.div style={{ y }} className="lg:w-2/5 w-full relative overflow-hidden">
+        <img
+          src="https://i.ibb.co.com/BKvT8myM/agriculture-healthy-food-23-2151969814.jpg"
+          alt="Why Choose Us"
+          className="w-full h-full object-cover m-4"
+        />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-yellow-900 via-yellow-700/50 to-transparent" />
 
-            {/* Right Part: 3/5 width */}
-            <div className="w-3/5 p-16 flex flex-col mt-12 ">
-                <p className='text-gray-600 text-sm mb-2'>OUR SPECIALITIES</p>
-                <h1 className='text-lime-800 text-5xl sm:text-6xl font-semibold mb-3'>
-                    Why Choose Us
-                </h1>
-                <img className='w-26 h-10' src={img1} alt="" />
-                <p className="text-lg text-gray-700 mb-10 mt-6">
-                    At AgriNext, we combine cutting-edge technology with deep agricultural insights to help farmers achieve better productivity and sustainability. Our platform offers smart tools, real-time data, and expert support tailored to every farmer's needs.
-                </p>
-
-                {/* Feature 1 */}
-             <div className="flex justify-between mb-10">
-             <div className="flex items-start gap-4 mb-6 p-4">
-                <FaCheckCircle className="text-lime-800 w-30 h-30 mt-1 " />
-
-                    <div className=''>
-                        <h3 className="text-xl font-semibold text-gray-800">Smart Monitoring</h3>
-                        <p className="text-gray-600 text-lg mt-6">Track your crop health and soil conditions in real-time with our intelligent sensors.Smart monitoring is really a speacial feature for smart agriculture.</p>
-                    </div>
-                </div>
-
-                {/* Feature 2 */}
-                <div className="flex items-start gap-4 mb-6 p-4">
-                <FaCheckCircle className="text-lime-800 w-30 h-30 mt-1" />
-
-                    <div>
-                        <h3 className="text-xl font-semibold text-gray-800">Expert Guidance</h3>
-                        <p className="text-gray-600 text-lg mt-6">Receive personalized tips and alerts to make data-driven farming decisions.By getting Expert is one of the best feature ever for smart farming and productivity.</p>
-                    </div>
-                </div>
-             </div>
-
-                {/* Read More Button */}
-                <button className="mt-4 flex items-center gap-2 bg-lime-800 text-white px-6 py-3 rounded hover:bg-lime-700 transition">
-                    Read More
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={2}
-                        stroke="currentColor"
-                        className="w-5 h-5 text-yellow-700"
-                    >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
+        {/* Floating Text Box */}
+        <div className="absolute top-6 left-6 bg-white/80 backdrop-blur-md p-6 rounded-lg shadow-lg max-w-xs">
+          <h3 className="text-xl font-bold text-lime-900 mb-2">Trusted by Farmers</h3>
+          <p className="text-sm text-gray-800">
+            Empowering agriculture through smart tech. Farming is the backbone of life—let’s make it smarter.
+           
+          </p>
         </div>
-    );
+      </motion.div>
+
+      {/* Right Section */}
+      <div className="lg:w-3/5 w-full px-6 lg:px-16 py-12 flex flex-col justify-center">
+        <p className="text-sm text-gray-600 uppercase tracking-wider mb-2">Our Specialities</p>
+        <h2 className="text-4xl sm:text-5xl font-bold text-lime-800 mb-4">Why Choose Us</h2>
+        <img src={img1} alt="Leaf Icon" className="w-28 h-auto mb-6" />
+        
+        <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+          At AgriNext, we blend innovation with deep agricultural understanding to empower farmers. Our smart tools and expert insights drive real results—more efficiency, more sustainability, more growth.
+          Empowering agriculture through smart tech. Farming is the backbone of life—let’s make it smarter.
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-10">
+          {/* Feature 1 */}
+          <div className="flex items-start gap-4 bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+            <FaCheckCircle className="text-lime-700 text-6xl mt-1" />
+            <div>
+              <h4 className="text-xl font-semibold text-gray-800">Smart Monitoring</h4>
+              <p className="text-gray-600 mt-2">
+                Track your crop and soil health in real time using intelligent sensors—designed for smarter decisions.
+                Our smart tools and expert insights drive real results—more efficiency, more sustainability, more growth.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 2 */}
+          <div className="flex items-start gap-4 bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+            <FaCheckCircle className="text-lime-700 text-6xl mt-1" />
+            <div>
+              <h4 className="text-xl font-semibold text-gray-800">Expert Guidance</h4>
+              <p className="text-gray-600 mt-2">
+                Get personalized farming advice and alerts from professionals to boost productivity and confidence.
+                At AgriNext, we blend innovation with deep agricultural understanding to empower farmers. 
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Button */}
+        <button className="inline-flex items-center gap-2 self-start bg-lime-800 text-white px-6 py-3 rounded-full hover:bg-lime-700 transition">
+          Read More
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-5 h-5 text-yellow-400"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default ChooseUs;
+
+
