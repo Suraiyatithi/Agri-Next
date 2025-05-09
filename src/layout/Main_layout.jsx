@@ -9,20 +9,23 @@ import ChooseUs from '../home/ChooseUs';
 import Footer from '../home/Footer';
 import TopFooter from '../home/TopFooter';
 import NesAnsArticles from '../home/NesAnsArticles';
+import AllPro from '../Product/AllPro';
+import HeroSection from '../home/HeroSection';
+
 
 const Main_layout = () => {
     return (
         <div>
-            <Top></Top>
-            <Header></Header>
             <Banner></Banner>
             <InfoSection></InfoSection>
-            <Offer></Offer>
+             <HeroSection></HeroSection>
+          
             <ChooseUs></ChooseUs>
+        <Offer></Offer>
             <LatestProject></LatestProject>
             <NesAnsArticles></NesAnsArticles>
             <TopFooter></TopFooter>
-            <Footer></Footer>
+          
           
         </div>
     );

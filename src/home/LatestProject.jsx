@@ -17,77 +17,8 @@ const LatestProject = () => {
 
 
 return (
-  // <div className="background pb-12"  style={{
-  //   backgroundImage: "url('https://i.ibb.co.com/tpKKntDv/pexels-photo-414837.jpg')",
-  // }}>
-  //   {/* Background Section with sticky image and overlay */}
-  //   <div
-  //     className="relative bg-cover bg-center h-[500px] flex items-center justify-center"
-     
-  //   >
-  //     <div className="absolute inset-0 bg-black/50"></div> {/* transparent overlay */}
-      
-  //     <div className="relative z-10 container mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between text-white">
-  //       {/* Left Heading */}
-  //       <div className="md:w-1/2 mb-6 md:mb-0">
-  //         <p className='text-gray-300 text-sm mb-2'>CLOSED PROJECTS</p>
-  //         <h1 className='text-4xl sm:text-6xl font-bold text-lime-400'>
-  //           Latest projects update
-  //         </h1>
-  //         <div className="">
-  //     <img className="w-26 h-10 mt-3" src={img1} alt="" />
-  //   </div>
-  //       </div>
-
-  //       {/* Right Paragraph */}
-  //       <div className="md:w-1/2 text-lg leading-relaxed text-gray-200">
-  //         <p>
-  //           Explore our recent smart agriculture initiatives, weather forecasting tools, animal care systems, and food supply chain solutions designed to empower farmers globally.
-  //         </p>
-  //       </div>
-  //     </div>
-     
-  //   </div>
-
-  //   {/* Centered Leaf Icon */}
-   
-
-  //   {/* Swiper Slides */}
-  //   <Swiper
-  //     modules={[Autoplay]}
-  //     autoplay={{ delay: 3000, disableOnInteraction: false }}
-  //     spaceBetween={30}
-  //     slidesPerView={1}
-  //     breakpoints={{
-  //       1024: {
-  //         slidesPerView: 2,
-  //       },
-  //     }}
-  //     loop={true}
-  //   >
-  //     {slideData.map((slide) => (
-  //       <SwiperSlide key={slide.id}>
-  //         <div
-  //           className="relative group h-64 lg:h-96 bg-cover bg-center rounded-xl overflow-hidden shadow-lg"
-  //           style={{ backgroundImage: `url(${slide.image})` }}
-  //         >
-  //           <a
-  //             href={slide.link}
-  //             className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 bg-black/50 transition duration-300"
-  //           >
-  //             <button className="backdrop-blur-sm bg-white/30 text-white text-3xl p-12 font-semibold rounded-xl hover:bg-yellow-700 transition">
-  //               {slide.des}
-  //             </button>
-  //           </a>
-  //         </div>
-  //       </SwiperSlide>
-  //     ))}
-  //   </Swiper>
-  // </div>
-
-
   <div
-  className="relative bg-cover bg-center pb-12 pt-12 "
+  className="relative background bg-cover bg-center pb-12 pt-12 "
   style={{
     backgroundImage: "url('https://i.ibb.co.com/tpKKntDv/pexels-photo-414837.jpg')",
   }}

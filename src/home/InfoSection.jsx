@@ -93,7 +93,7 @@ const InfoSection = () => {
       </div>
 </div>
       {/* InfoBottom Section */}
-      <div className="-mt-20 z-10 relative">
+      <div className="-mt-30 z-10 relative">
         <InfoBottom />
       </div>
     </div>
