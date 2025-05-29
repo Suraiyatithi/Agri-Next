@@ -1,7 +1,11 @@
 
+
+
+
+
 // import React from 'react';
 // import logo from '../assets/Agrinext-logo2.png';
-// import { FaHome, FaLeaf, FaShoppingCart,FaUser, FaTags, FaBlog } from 'react-icons/fa';
+// import { FaHome, FaLeaf, FaShoppingCart, FaUser, FaTags, FaBlog } from 'react-icons/fa';
 // import { MdOutlineProductionQuantityLimits } from 'react-icons/md';
 // import { Link } from 'react-router-dom';
 
@@ -13,45 +17,40 @@
 //                     <div className='flex flex-wrap justify-between items-center'>
 
 //                         {/* Logo */}
-//                         <img src={logo} className='w-56 h-24 -mb-4' alt="AgriNext Logo" />
+//                         <Link to="/">
+//                             <img src={logo} className='w-56 h-24 -mb-4' alt="AgriNext Logo" />
+//                         </Link>
 
 //                         {/* Navigation Menu */}
 //                         <ul className='flex gap-10 items-center text-gray-700 font-medium text-lg'>
 //                             <li className='flex items-center gap-2 hover:text-lime-600 cursor-pointer'>
-//                                 <FaHome /> Home
+//                                 <FaHome />
+//                                 <Link to="/">Home</Link>
 //                             </li>
 //                             <li className='flex items-center gap-2 hover:text-lime-600 cursor-pointer'>
-//                                 <FaLeaf /> Feature
+//                                 <FaLeaf /> 
+                              
+//                                 <Link to="/feature">Feature</Link>
 //                             </li>
 //                             <li className='flex items-center gap-2 hover:text-lime-600 cursor-pointer'>
-//                                 <MdOutlineProductionQuantityLimits /> <Link>Products</Link>
+//                                 <MdOutlineProductionQuantityLimits />
+//                                 <Link to="/products">Products</Link>
 //                             </li>
 //                             <li className='flex items-center gap-2 hover:text-lime-600 cursor-pointer'>
-//                                 <FaTags /> Offer
+//                                 <FaTags />
+//                                 <Link to="/offer">Offer</Link>
 //                             </li>
 //                             <li className='flex items-center gap-2 hover:text-lime-600 cursor-pointer'>
-//                                 <FaBlog /> Blog
+//                                 <FaBlog />
+//                                 <span>Blog</span>
 //                             </li>
 //                         </ul>
 
-//                         {/* Cart Summary */}
-//                         {/* <div className='flex gap-4 items-center text-gray-700'>
-//                             <div className='flex items-center gap-2 hover:text-lime-600 cursor-pointer'>
-//                                 <FaShoppingCart className="text-xl" />
-//                                 <p>Cart</p>
-//                             </div>
-//                             <div className='text-sm'>
-//                                 <p>
-//                                     <span className='text-gray-500'>3 items</span> &nbsp;
-//                                     <span className='text-gray-800 font-semibold'>$150.00</span>
-//                                 </p>
-//                             </div> */}
-//                               <div className="flex border-2 font-medium text-lg rounded-full px-4 py-2 border-lime-800 items-center gap-2 cursor-pointer hover:text-lime-600">
-//                                                                     <FaUser />
-//                                                                     <p>Login</p>
-//                                                                 </div>
-//                         {/* </div> */}
-
+//                         {/* Login Button */}
+//                         <div className="flex border-2 font-medium text-lg rounded-full px-4 py-2 border-lime-800 items-center gap-2 cursor-pointer hover:text-lime-600">
+//                             <FaUser />
+//                               <Link to="/login">LogIn</Link>
+//                         </div>
 //                     </div>
 //                 </div>
 //             </section>
@@ -61,15 +60,22 @@
 
 // export default Header;
 
-
-
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../assets/Agrinext-logo2.png';
 import { FaHome, FaLeaf, FaShoppingCart, FaUser, FaTags, FaBlog } from 'react-icons/fa';
 import { MdOutlineProductionQuantityLimits } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Providers/AuthProvider';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {})
+            .catch(error => console.log(error));
+    };
+
     return (
         <div className='bg-slate-50 shadow-md sticky top-0 z-50'>
             <section className='py-4'>
@@ -89,7 +95,7 @@ const Header = () => {
                             </li>
                             <li className='flex items-center gap-2 hover:text-lime-600 cursor-pointer'>
                                 <FaLeaf />
-                                <span>Feature</span>
+                                <Link to="/feature">Feature</Link>
                             </li>
                             <li className='flex items-center gap-2 hover:text-lime-600 cursor-pointer'>
                                 <MdOutlineProductionQuantityLimits />
@@ -105,11 +111,35 @@ const Header = () => {
                             </li>
                         </ul>
 
-                        {/* Login Button */}
-                        <div className="flex border-2 font-medium text-lg rounded-full px-4 py-2 border-lime-800 items-center gap-2 cursor-pointer hover:text-lime-600">
-                            <FaUser />
-                            <p>Login</p>
-                        </div>
+                        {/* User Info / Login */}
+                        {
+                            user ? (
+                                <div className="flex items-center gap-4">
+                                    {/* User Photo */}
+                                    {
+                                        user.photoURL && (
+                                            <img
+                                                src={user.photoURL}
+                                                alt="User"
+                                                className="w-10 h-10 rounded-full border-2 border-lime-800"
+                                            />
+                                        )
+                                    }
+                                    {/* Logout Button */}
+                                    <button
+                                        onClick={handleLogOut}
+                                        className="border-2 rounded-full px-4 py-2 font-medium text-lg border-lime-800 hover:text-lime-600"
+                                    >
+                                        Logout
+                                    </button>
+                                </div>
+                            ) : (
+                                <div className="flex border-2 font-medium text-lg rounded-full px-4 py-2 border-lime-800 items-center gap-2 cursor-pointer hover:text-lime-600">
+                                    <FaUser />
+                                    <Link to="/login">LogIn</Link>
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
             </section>
@@ -118,4 +148,3 @@ const Header = () => {
 };
 
 export default Header;
-
