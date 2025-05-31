@@ -2,8 +2,10 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram,FaShoppingCart, FaUser } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-
+import useCart from '../Hooks/useCart';
+import { Link } from 'react-router-dom';
 const Top = () => {
+    const [cart] = useCart();
     return (
         <div className="bg-slate-50 border-b border-gray-200">
             <section className="drop-shadow">
@@ -47,7 +49,7 @@ const Top = () => {
                                         <p>Login</p>
                                     </div> */}
                                       <div className='flex gap-4 items-center text-gray-700'>
-                                                                <div className='flex items-center gap-2 hover:text-lime-600 cursor-pointer'>
+                                                                {/* <div className='flex items-center gap-2 hover:text-lime-600 cursor-pointer'>
                                                                     <FaShoppingCart className="text-xl" />
                                                                     <p>Cart</p>
                                                                 </div>
@@ -56,6 +58,15 @@ const Top = () => {
                                                                         <span className='text-gray-500'>3 items</span> &nbsp;
                                                                         <span className='text-gray-800 font-semibold'>$150.00</span>
                                                                     </p>
+                                                                </div> */}
+
+                                                                <div className="">
+                                                                      <Link to="/dashboard/cart">
+                <button className="btn">
+                    <FaShoppingCart className="mr-2"></FaShoppingCart>
+                    <div className="badge badge-secondary">+{cart.length}</div>
+                </button>
+            </Link>
                                                                 </div>
                                                                 </div>
                                 </div>
