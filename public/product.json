@@ -1,6 +1,6 @@
 [
     {
-      "_id": "1",
+     
       "category": "Fertilizer",
       "productName": "Organic Compost",
       "authorName": "Alex Green",
@@ -12,7 +12,7 @@
       "availableQuantity": 100
     },
     {
-      "_id": "2",
+      
       "category": "Seeds",
       "productName": "Hybrid Tomato Seeds",
       "authorName": "Ravi Kumar",
@@ -24,7 +24,7 @@
       "availableQuantity": 200
     },
     {
-      "_id": "3",
+     
       "category": "Tools",
       "productName": "Hand Tiller",
       "authorName": "Emily Smith",
@@ -36,7 +36,7 @@
       "availableQuantity": 50
     },
     {
-      "_id": "4",
+      
       "category": "Pesticides",
       "productName": "Neem Oil Spray",
       "authorName": "Mohammed Ali",
@@ -48,7 +48,7 @@
       "availableQuantity": 75
     },
     {
-      "_id": "5",
+     
       "category": "Machinery",
       "productName": "Mini Tractor",
       "authorName": "Anika Roy",
@@ -60,7 +60,7 @@
       "availableQuantity": 10
     },
     {
-      "_id": "6",
+    
       "category": "Fertilizer",
       "productName": "Urea Pack",
       "authorName": "Liam Patel",
@@ -72,7 +72,7 @@
       "availableQuantity": 150
     },
     {
-      "_id": "7",
+
       "category": "Seeds",
       "productName": "Basmati Rice Seeds",
       "authorName": "Priya Desai",
@@ -84,7 +84,7 @@
       "availableQuantity": 120
     },
     {
-      "_id": "8",
+     
       "category": "Tools",
       "productName": "Spray Pump",
       "authorName": "Jacob Lee",
@@ -96,7 +96,7 @@
       "availableQuantity": 40
     },
     {
-      "_id": "9",
+      
       "category": "Pesticides",
       "productName": "Bio Insecticide",
       "authorName": "Fatima Khan",
@@ -108,7 +108,7 @@
       "availableQuantity": 60
     },
     {
-      "_id": "10",
+   
       "category": "Fertilizer",
       "productName": "Potash Granules",
       "authorName": "Ethan Roy",
@@ -120,7 +120,7 @@
       "availableQuantity": 90
     },
     {
-      "_id": "11",
+    
       "category": "Seeds",
       "productName": "Okra Seeds",
       "authorName": "Sara Malik",
@@ -132,7 +132,7 @@
       "availableQuantity": 130
     },
     {
-      "_id": "12",
+      
       "category": "Machinery",
       "productName": "Irrigation Motor",
       "authorName": "Rahul Sen",
@@ -144,7 +144,7 @@
       "availableQuantity": 15
     },
     {
-      "_id": "13",
+     
       "category": "Tools",
       "productName": "Shovel",
       "authorName": "Linda Brown",
@@ -156,7 +156,7 @@
       "availableQuantity": 70
     },
     {
-      "_id": "14",
+     
       "category": "Pesticides",
       "productName": "Herbal Fungicide",
       "authorName": "Arjun Mehta",
@@ -168,7 +168,7 @@
       "availableQuantity": 95
     },
     {
-      "_id": "15",
+
       "category": "Fertilizer",
       "productName": "Vermicompost",
       "authorName": "Chloe Taylor",

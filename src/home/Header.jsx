@@ -1,15 +1,22 @@
 
-
-
-
-
-// import React from 'react';
+// import React, { useContext } from 'react';
 // import logo from '../assets/Agrinext-logo2.png';
 // import { FaHome, FaLeaf, FaShoppingCart, FaUser, FaTags, FaBlog } from 'react-icons/fa';
 // import { MdOutlineProductionQuantityLimits } from 'react-icons/md';
 // import { Link } from 'react-router-dom';
+// import { AuthContext } from '../Providers/AuthProvider';
+// import useAdmin from '../Hooks/useAdmin';
+
 
 // const Header = () => {
+//     const { user, logOut } = useContext(AuthContext);
+//    const [isAdmin] = useAdmin();
+//     const handleLogOut = () => {
+//         logOut()
+//             .then(() => {})
+//             .catch(error => console.log(error));
+//     };
+
 //     return (
 //         <div className='bg-slate-50 shadow-md sticky top-0 z-50'>
 //             <section className='py-4'>
@@ -28,8 +35,7 @@
 //                                 <Link to="/">Home</Link>
 //                             </li>
 //                             <li className='flex items-center gap-2 hover:text-lime-600 cursor-pointer'>
-//                                 <FaLeaf /> 
-                              
+//                                 <FaLeaf />
 //                                 <Link to="/feature">Feature</Link>
 //                             </li>
 //                             <li className='flex items-center gap-2 hover:text-lime-600 cursor-pointer'>
@@ -46,11 +52,35 @@
 //                             </li>
 //                         </ul>
 
-//                         {/* Login Button */}
-//                         <div className="flex border-2 font-medium text-lg rounded-full px-4 py-2 border-lime-800 items-center gap-2 cursor-pointer hover:text-lime-600">
-//                             <FaUser />
-//                               <Link to="/login">LogIn</Link>
-//                         </div>
+//                         {/* User Info / Login */}
+//                         {
+//                             user ? (
+//                                 <div className="flex items-center gap-4">
+//                                     {/* User Photo */}
+//                                     {
+//                                         user.photoURL && (
+//                                             <img
+//                                                 src={user.photoURL}
+//                                                 alt="User"
+//                                                 className="w-10 h-10 rounded-full border-2 border-lime-800"
+//                                             />
+//                                         )
+//                                     }
+//                                     {/* Logout Button */}
+//                                     <button
+//                                         onClick={handleLogOut}
+//                                         className="border-2 rounded-full px-4 py-2 font-medium text-lg border-lime-800 hover:text-lime-600"
+//                                     >
+//                                         Logout
+//                                     </button>
+//                                 </div>
+//                             ) : (
+//                                 <div className="flex border-2 font-medium text-lg rounded-full px-4 py-2 border-lime-800 items-center gap-2 cursor-pointer hover:text-lime-600">
+//                                     <FaUser />
+//                                     <Link to="/login">LogIn</Link>
+//                                 </div>
+//                             )
+//                         }
 //                     </div>
 //                 </div>
 //             </section>
@@ -59,22 +89,25 @@
 // };
 
 // export default Header;
-
 import React, { useContext } from 'react';
 import logo from '../assets/Agrinext-logo2.png';
 import { FaHome, FaLeaf, FaShoppingCart, FaUser, FaTags, FaBlog } from 'react-icons/fa';
 import { MdOutlineProductionQuantityLimits } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
+import useAdmin from '../Hooks/useAdmin';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [isAdmin] = useAdmin();
 
     const handleLogOut = () => {
         logOut()
             .then(() => {})
             .catch(error => console.log(error));
     };
+
+    const dashboardLink = isAdmin ? '/dashboard/adminHome' : '/dashboard/userHome';
 
     return (
         <div className='bg-slate-50 shadow-md sticky top-0 z-50'>
@@ -115,14 +148,16 @@ const Header = () => {
                         {
                             user ? (
                                 <div className="flex items-center gap-4">
-                                    {/* User Photo */}
+                                    {/* User Photo (Linked to Dashboard) */}
                                     {
                                         user.photoURL && (
-                                            <img
-                                                src={user.photoURL}
-                                                alt="User"
-                                                className="w-10 h-10 rounded-full border-2 border-lime-800"
-                                            />
+                                            <Link to={dashboardLink}>
+                                                <img
+                                                    src={user.photoURL}
+                                                    alt="User"
+                                                    className="w-10 h-10 rounded-full border-2 border-lime-800 hover:opacity-80"
+                                                />
+                                            </Link>
                                         )
                                     }
                                     {/* Logout Button */}
@@ -148,3 +183,4 @@ const Header = () => {
 };
 
 export default Header;
+
