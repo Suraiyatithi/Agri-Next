@@ -15,7 +15,8 @@ const ChooseUs = () => {
       {/* Left Section */}
       <motion.div style={{ y }} className="lg:w-2/5 w-full relative overflow-hidden">
         <img
-          src="https://i.ibb.co.com/BKvT8myM/agriculture-healthy-food-23-2151969814.jpg"
+        src="https://i.ibb.co/TxsDNDrg/grain-drying-2107462-1280.jpg"
+          // src="https://i.ibb.co.com/BKvT8myM/agriculture-healthy-food-23-2151969814.jpg"
           alt="Why Choose Us"
           className="w-full h-full object-cover m-4"
         />

@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Organic Fertilizers: A Sustainable Choice",
+    "description": "Learn how organic fertilizers improve soil health and crop yield without harming the environment.",
+    "image": "https://i.ibb.co/cRpxB9f/download.jpg",
+    "authorName": "Dr. Farzana Islam",
+    "authorEmail": "farzana@agrinext.com",
+    "likes": 0,
+    "comments": []
+  },
+  {
+    "title": "Smart Irrigation Techniques in 2025",
+    "description": "Explore the latest water-saving techniques using smart sensors and IoT in agriculture.",
+    "image": "https://i.ibb.co/7NKrC0v9/1736334584453.jpg",
+    "authorName": "Anik Rahman",
+    "authorEmail": "anik@agrinext.com",
+    "likes": 0,
+    "comments": []
+  },
+  {
+    "title": "Top 5 Weather Apps for Farmers",
+    "description": "These apps help predict rainfall and temperatures to plan farming activities better.",
+    "image": "https://i.ibb.co/991P99f8/download.jpg",
+    "authorName": "Nusrat Jahan",
+    "authorEmail": "nusrat@agrinext.com",
+    "likes": 0,
+    "comments": []
+  },
+  {
+    "title": "Hydroponics: The Future of Farming",
+    "description": "Hydroponics allows crops to grow without soil, using nutrient-rich water solutions.",
+    "image": "https://i.ibb.co/Rp8Yyvnk/download.jpg",
+    "authorName": "Md. Rafi",
+    "authorEmail": "rafi@agrinext.com",
+    "likes": 0,
+    "comments": []
+  },
+  {
+    "title": "Drones in Agriculture",
+    "description": "Drones are being used to monitor fields, plant seeds, and even spray pesticides.",
+    "image": "https://i.ibb.co/PsbQk4vW/download.jpg",
+    "authorName": "Tithi Khan",
+    "authorEmail": "tithi@agrinext.com",
+    "likes": 0,
+    "comments": []
+  },
+  {
+    "title": "Composting at Home for Your Garden",
+    "description": "Turn your kitchen waste into nutrient-rich compost with these easy steps.",
+    "image": "https://i.ibb.co/6JZzDxLx/download.jpg",
+    "authorName": "Rafiq Uddin",
+    "authorEmail": "rafiq@agrinext.com",
+    "likes": 0,
+    "comments": []
+  }
+]

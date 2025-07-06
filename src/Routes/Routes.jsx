@@ -22,6 +22,11 @@ import PaymentHistory from "../Page/Dashboard/PaymentHistory";
 import AdminHome from "../Page/Dashboard/AdminHome";
 import UserHome from "../Page/Dashboard/UserHome";
 import MakeSeller from "../Page/Dashboard/MakeSeller";
+import BlogPage from "../Page/BlogPage/Blog";
+import OfferPage from "../layout/offerLayout";
+import ShowPayment from "../Page/Dashboard/ShowPayment";
+import ReviewPage from "../Page/Dashboard/ReviewPage";
+
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +56,15 @@ export const router = createBrowserRouter([
         {
           path: 'secret',
           element:<PrivateRoute><Secret></Secret></PrivateRoute>
+        }
+        ,
+        {
+          path:'blog',
+          element:<BlogPage></BlogPage>
+        },
+        {
+          path:'offer',
+          element:<OfferPage></OfferPage>
         }
     ]
   },
@@ -85,6 +99,9 @@ export const router = createBrowserRouter([
         {
           path: 'paymentHistory',
           element:<PaymentHistory></PaymentHistory>
+        },{
+           path: 'review',
+           element:<ReviewPage></ReviewPage>
         },
 
 
@@ -109,6 +126,10 @@ export const router = createBrowserRouter([
         {
           path: 'users',
           element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+        },
+        {
+path:'allpayment',
+element:<AdminRoute><ShowPayment></ShowPayment> </AdminRoute>
         },
         {
     path: 'makeseller',

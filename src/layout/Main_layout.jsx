@@ -11,6 +11,12 @@ import TopFooter from '../home/TopFooter';
 import NesAnsArticles from '../home/NesAnsArticles';
 import AllPro from '../Product/AllPro';
 import HeroSection from '../home/HeroSection';
+import Chatbot from '../home/Chatbot/CHatbotui';
+import WeatherCard from '../home/Weathercard';
+import TipsCarousel from '../home/Tips';
+import HomeFeatures from '../home/Homefeatures';
+import Combo from '../home/Combo';
+import ReviewsSection from '../home/ReviewSection';
 
 
 const Main_layout = () => {
@@ -19,10 +25,15 @@ const Main_layout = () => {
             <Banner></Banner>
             <InfoSection></InfoSection>
              <HeroSection></HeroSection>
-          
+             {/* <WeatherCard></WeatherCard>
+             <TipsCarousel></TipsCarousel> */}
+             <Combo></Combo>
+          <Chatbot></Chatbot>
+          <HomeFeatures></HomeFeatures>
             <ChooseUs></ChooseUs>
         <Offer></Offer>
             <LatestProject></LatestProject>
+            <ReviewsSection></ReviewsSection>
             <NesAnsArticles></NesAnsArticles>
             <TopFooter></TopFooter>
           
