@@ -19,12 +19,12 @@ const HeroSection = () => {
     const prevSlide = () => {
         if (index - 2 >= 0) setIndex(index - 2);
     };
-// 
+// 'https://i.ibb.co/qF1BTKh3/hydroponics-system-planting-vegetables-herbs-without-using-soil-health-1150-8153.jpg'
 //https://i.ibb.co.com/Lz99JCB5/pexels-photo-767240.webp
     return (
         <div
             className="flex background flex-col md:flex-row items-center mt-12 mb-12 justify-between bg-cover bg-center py-16 px-6 md:px-16"
-            style={{ backgroundImage: `url('https://i.ibb.co/qF1BTKh3/hydroponics-system-planting-vegetables-herbs-without-using-soil-health-1150-8153.jpg')` }} // Replace with your image path
+            style={{ backgroundImage: `url('https://i.ibb.co/1fX0VqJk/22.webp')` }} // Replace with your image path
         >
             {/* Left Section: Heading */}
             <div className="w-full md:w-2/6 text-white space-y-6 mb-10 md:mb-0">

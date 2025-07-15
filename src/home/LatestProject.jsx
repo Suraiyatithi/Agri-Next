@@ -7,9 +7,9 @@ import '../Allcss/Allcss.css'
 
 
 const slideData = [
-  { id: 1, image: 'https://i.ibb.co.com/tpKKntDv/pexels-photo-414837.jpg', link: '#project1',des:'Weather Forcasting and Solution', },
+  { id: 1, image: 'https://i.ibb.co/2JPYt2J/download.jpg', link: '#project1',des:'Weather Forcasting and Solution', },
   { id: 2, image: 'https://i.ibb.co.com/mFTRtRYY/kittens-cat-cat-puppy-rush-45170.jpg', link: '#project2',des:'Animal Food and medicine supply' },
-  { id: 3, image: 'https://i.ibb.co.com/vCNmWvxB/download.jpg', link: '#project3',des:'Supply Home made Food ' },
+  { id: 3, image: 'https://i.ibb.co/chhyT33q/download.jpg', link: '#project3',des:'Supply Home made Food ' },
   { id: 4, image: 'https://i.ibb.co.com/cSVzWkvB/download.jpg', link: '#project4',des:'Matket Price Analysis' },
 ];
 

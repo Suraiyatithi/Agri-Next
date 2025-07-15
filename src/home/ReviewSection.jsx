@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import useAxiosSecure from '../Hooks/useAxiosSecure';
+import img1 from '../assets/main-icon-leaf.png'
 
 const ReviewsSection = () => {
   const axiosSecure = useAxiosSecure();
@@ -18,8 +19,13 @@ const ReviewsSection = () => {
 
   return (
     <div className="my-12 px-4">
-      <h2 className="text-3xl font-bold text-center mb-6">What Our Users Say</h2>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                         
+      <div className="flex lg:ml-40 lg:pl-40">
+                  
+      <h2 className=" text-lime-800 lg:text-4xl sm:text-xl text-right font-semibold mb-12 lg:ml-20">What Our Users Say</h2>
+     <img className="w-26 h-10" src={img1} alt="" />
+      </div>
+       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {reviews.slice(0, 6).map((review, idx) => (
           <div key={idx} className="bg-white shadow-md rounded-xl p-4">
             <div className="flex items-center gap-4 mb-2">

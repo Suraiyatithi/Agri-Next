@@ -61,6 +61,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import img from "../assets/irewolede-PvwdlXqo85k-unsplash.jpg";
 import img2 from "../assets/jan-kopriva-LTMaAwxanGk-unsplash.jpg";
+import img3 from '../assets/tractor-agricultural-machine-cultivating-field.jpg';
 
 const slides = [
   {
@@ -79,7 +80,7 @@ const slides = [
   },
   {
     id: 3,
-    image: img,
+    image: img3,
     title: "Drone Surveillance",
     description:
       "Drones enable precision farming by offering aerial views of crop health, pest outbreaks, and irrigation coverage. With quick and comprehensive insights, farmers can respond faster to issues, ensuring healthier crops and improved harvests across larger farmlands.",

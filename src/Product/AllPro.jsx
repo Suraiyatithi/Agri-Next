@@ -33,7 +33,7 @@ const AllPro = () => {
     );
 
     return (
-        <div className="px-6 py-10">
+        <div className="w-full px-4 py-12 bg-gradient-to-br from-green-50 to-green-100">
             {/* Search Bar */}
             <div className="max-w-md mx-auto mb-10">
                 <input

@@ -26,12 +26,14 @@ import BlogPage from "../Page/BlogPage/Blog";
 import OfferPage from "../layout/offerLayout";
 import ShowPayment from "../Page/Dashboard/ShowPayment";
 import ReviewPage from "../Page/Dashboard/ReviewPage";
+import ErrorPage from "../Page/Error";
 
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+      errorElement:<ErrorPage></ErrorPage>,
     children:[
     {
         path:'/',

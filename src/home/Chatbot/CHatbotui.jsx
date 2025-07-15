@@ -83,7 +83,7 @@ const Chatbot = () => {
 
   return (
     <div className="w-full max-w-md p-4 border rounded-2xl shadow-lg bg-white fixed bottom-4 right-4 z-50 font-sans">
-      <h2 className="text-2xl font-bold text-green-700 mb-3 flex items-center gap-2">
+      <h2 className="text-2xl font-bold text-lime-800 mb-3 flex items-center gap-2">
         🌿 AgriBot
       </h2>
 
@@ -116,12 +116,12 @@ const Chatbot = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSend()}
-          className="flex-grow border border-green-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+          className="flex-grow border border-lime-800 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 transition"
           placeholder="Ask something like 'how to grow rice'..."
         />
         <button
           onClick={handleSend}
-          className="bg-green-600 hover:bg-green-700 transition text-white px-4 py-2 rounded-full font-semibold"
+          className="bg-lime-800 hover:bg-green-700 transition text-white px-4 py-2 rounded-full font-semibold"
         >
           Send
         </button>
