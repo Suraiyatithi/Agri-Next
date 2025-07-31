@@ -39,7 +39,7 @@ import {
 
 const queryClient = new QueryClient();
 
-
+import './i18n.js';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

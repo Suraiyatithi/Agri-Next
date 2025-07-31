@@ -1,0 +1,204 @@
+
+{
+  "home": "Home",
+  "feature": "Feature",
+  "products": "Products",
+  "offer": "Offer",
+  "blog": "Blog",
+  "add_items": "Add Items",
+"banner": {
+  "smart_irrigation_title": "Smart Irrigation",
+  "smart_irrigation_desc": "Smart irrigation systems help conserve water by delivering the right amount at the right time, automatically adjusting to weather conditions. With this advanced technology, farmers can reduce water waste, lower operational costs, and increase crop efficiency—making agriculture more sustainable and impactful for our nation.",
+  
+  "soil_monitoring_title": "Soil Monitoring",
+  "soil_monitoring_desc": "Soil monitoring sensors provide farmers with real-time data on moisture, temperature, and nutrient levels. This data-driven approach empowers them to make informed decisions, optimize fertilization schedules, and boost crop productivity, ultimately contributing to smarter and greener agriculture.",
+  
+  "drone_surveillance_title": "Drone Surveillance",
+  "drone_surveillance_desc": "Drones enable precision farming by offering aerial views of crop health, pest outbreaks, and irrigation coverage. With quick and comprehensive insights, farmers can respond faster to issues, ensuring healthier crops and improved harvests across larger farmlands."
+},
+
+"info": {
+  "empowering_title": "Empowering Farmers Everywhere",
+  "empowering_description": "AgriNext is committed to revolutionizing agriculture with modern tools and smart solutions. With today’s innovative technology, farming is easier, more profitable, and sustainable. We strive to ensure every farmer can benefit from the digital age.",
+  
+  "happy_clients": "Happy Clients",
+  "products_available": "Products Available",
+  
+  "about_mission_title": "About Our Mission",
+  "about_mission_description": "We aim to bridge the gap between traditional farming and technological advancement by providing easy-to-use solutions tailored to farmers’ needs. Our goal is to empower rural communities, enhance productivity, and build a sustainable future. Smart farming tools from AgriNext allow better monitoring, decision-making, and yield optimization to ultimately help feed the world.",
+  
+  "about_us_button": "About Us"
+},
+
+
+  "info_bottom": {
+  "slide1": {
+    "title": "Empowering Farmers",
+    "desc": "Our goal is to empower farmers in remote villages who often lack essential resources. Agriculture forms the backbone of every nation—our mission is to support those who grow our food."
+  },
+  "slide2": {
+    "title": "Smart Agriculture Solutions",
+    "desc": "With smart farming tools, we help maximize yield and efficiency. Our tech-driven approach ensures modern solutions reach even the most underserved farmers."
+  },
+  "slide3": {
+    "title": "Future of Farming",
+    "desc": "Agriculture is a nation’s lifeline. We envision a future where every farmer, regardless of location, has access to innovative tools and opportunities."
+  }
+}
+
+
+,
+
+"hero": {
+  "heading": "Discover Smart Farming Products",
+  "subheading": "Boost productivity with our premium and sustainable farming tools.",
+  "button": "Browse Products"
+}
+,
+"home_features": {
+  "heading": "Why Choose AgriNext",
+  "smart_farming_title": "Smart Farming Tips",
+  "smart_farming_desc": "Get updated advice tailored to your crops and region.",
+  "weather_title": "Live Weather Insights",
+  "weather_desc": "Stay ahead with hyperlocal weather forecasts for your fields.",
+  "eco_tools_title": "Eco-Friendly Tools",
+  "eco_tools_desc": "Explore sustainable equipment and fertilizers.",
+  "library_title": "Knowledge Library",
+  "library_desc": "Access expert-verified articles and guides."
+}
+,
+"choose": {
+  "trusted_title": "Trusted by Farmers",
+  "trusted_desc": "Empowering agriculture through smart tech. Farming is the backbone of life—let’s make it smarter.",
+  "specialities": "Our Specialities",
+  "heading": "Why Choose Us",
+  "intro_desc": "At AgriNext, we blend innovation with deep agricultural understanding to empower farmers. Our smart tools and expert insights drive real results—more efficiency, more sustainability, more growth.",
+  "feature1_title": "Smart Monitoring",
+  "feature1_desc": "Track your crop and soil health in real time using intelligent sensors—designed for smarter decisions. Our smart tools and expert insights drive real results—more efficiency, more sustainability, more growth.",
+  "feature2_title": "Expert Guidance",
+  "feature2_desc": "Get personalized farming advice and alerts from professionals to boost productivity and confidence. At AgriNext, we blend innovation with deep agricultural understanding to empower farmers.",
+  "button": "Read More"
+}
+,
+"offers": {
+  "welcome": "WELCOME TO AGRINEXT",
+  "heading": "What we are offering",
+  "items": [
+    {
+     "image": "https://i.ibb.co.com/WWFbqGxB/pexels-photo-2933243.jpg",
+      "logo": "https://i.ibb.co.com/S73CRY5G/download.png",
+      "text": "Smart Irrigation Solutions",
+      "des": "Farming products such as tractors, irrigation systems, motors, seeds, and fertilizers are available for farmers to use on their farms."
+    },
+    {
+        "image": "https://i.ibb.co.com/VpzzVMcL/pexels-photo-2252584.jpg",
+     "logo": "https://i.ibb.co.com/FkLZ0p7D/download.jpg",
+      "text": "Fresh Fruits and Vegetables",
+      "des": "Our farmers grow healthy, organic fruits and vegetables that are available for sale and consumption."
+    },
+    {
+       "image": "https://i.ibb.co/d0KJdBZk/bull-calf-heifer-ko-162240.jpg",
+      "logo": "https://i.ibb.co.com/HDLnKBqm/download.jpg",
+      "text": "Healthy Dairy Products",
+      "des": "Stay healthy with our pure dairy products and homemade foods prepared by villagers using traditional methods."
+    },
+    {
+     "image": "https://i.ibb.co.com/GQxrfYFF/pexels-photo-1072824.jpg",
+      "logo": "https://i.ibb.co.com/nqDrp03h/pngtree-green-plant-logo-png-image-9164721.png",
+      "text": "Plant-Related Products",
+      "des": "We provide high-quality seeds and plant products that ensure increased crop productivity."
+    }
+  ]
+}
+,
+"latest_projects": {
+  "welcome": "CLOSED PROJECTS",
+  "heading": "Latest projects update",
+  "desc": "Explore our recent smart agriculture initiatives, weather forecasting tools, animal care systems, and food supply chain solutions designed to empower farmers globally.",
+  "weather": "Weather Forecasting and Solution",
+  "animal": "Animal Food and Medicine Supply",
+  "food": "Supply Homemade Food",
+  "market": "Market Price Analysis",
+  "care_heading": "We care about our agriculture",
+  "care_desc": "Our platform supports farmers through data-driven tools, sustainable practices, and reliable resources to ensure a brighter future for agriculture."
+}
+,
+"reviews": {
+  "heading": "What Our Users Say",
+  "loading": "Loading reviews...",
+  "rating": "Rating"
+}
+,
+"news": {
+  "welcome": "WELCOME TO AGRINEXT",
+  "heading": "Latest News and Articles",
+  "read_more": "Continue Reading",
+  "title1": "Smart Farming: The Future of Agriculture",
+  "desc1": "Smart farming integrates advanced technology into traditional agriculture, optimizing productivity and sustainability...",
+  "title2": "Sustainable Farming Practices in 2025",
+  "desc2": "Discover how farmers are adopting sustainable methods to protect the environment while increasing yield...",
+  "title3": "Climate Change and Its Effect on Crops",
+  "desc3": "Rising temperatures and unpredictable weather patterns are forcing a change in how we grow our food..."
+}
+,
+"top_footer": {
+  "tagline": "Happy Farming",
+  "heading": "Empowering Farmers for a Better Tomorrow",
+  "description": "Join us in revolutionizing agriculture with smart, sustainable solutions.",
+  "button": "Contact Us Today >"
+}
+,
+"footer": {
+  "tagline": "Farm of Laughter and Happiness",
+  "contact_title": "Contact Us",
+  "phone": "Phone: +880 123 456 789",
+  "email": "Email: contact@agrinext.com",
+  "address": "Address: 123 Greenfield Rd, Agro City",
+  "news_title": "News Post",
+  "news1": "Agri Expo 2025",
+  "news2": "New AI Tools Launched",
+  "news3": "Sustainable Farming Tips",
+  "links_title": "Quick Links",
+  "subscribe_title": "Subscribe Newsletter",
+  "subscribe_text": "Stay updated with our latest news and offerings.",
+  "email_placeholder": "Enter your email",
+  "subscribe_button": "Subscribe",
+  "rights": "All rights reserved."
+}
+,
+"about": "About Us",
+"services": "Services",
+"contact": "Contact",
+  "weather": {
+    "title": "Weather Today",
+    "location": "Location",
+    "humidity": "Humidity",
+    "condition": "Condition",
+    "cropTip": "Crop Tip",
+    "suggestion": "Ideal for paddy transplantation today."
+  },
+  "tips": {
+  "title": "🌾 Smart Farming Tip",
+  "tip1": "Use compost to improve soil fertility naturally.",
+  "tip2": "Rotate crops to prevent soil nutrient depletion.",
+  "tip3": "Check leaves for early signs of pests or disease.",
+  "tip4": "Water plants early in the morning to avoid evaporation.",
+  "tip5": "Use drip irrigation to conserve water efficiently."
+}
+,
+
+  "by": "By",
+  "inStock": "In Stock",
+  "addToCart": "Add to Cart",
+  "cartAdded": "added to your cart",
+  "notLoggedIn": "You are not Logged In",
+  "pleaseLoginAddCart": "Please login to add to the cart?",
+  "yesLogin": "Yes, login!"
+
+
+
+
+
+
+}
+

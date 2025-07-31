@@ -1,4 +1,10 @@
+
 // import React from 'react';
+// import Swal from "sweetalert2";
+// import useAuth from '../Hooks/useAuth';
+// import { useLocation, useNavigate } from "react-router-dom";
+// import useAxiosSecure from '../Hooks/useAxiosSecure';
+// import useCart from '../Hooks/useCart';
 
 // const ProductData = ({ data }) => {
 //     const {
@@ -13,6 +19,51 @@
 //         category,
 //         _id
 //     } = data;
+
+//     const { user } = useAuth();
+//     const navigate = useNavigate();
+//     const location = useLocation();
+//     const axiosSecure = useAxiosSecure();
+//     const [, refetch] = useCart();
+
+//     const handleAddToCart = () => {
+//         if (user && user.email) {
+//             const cartItem = {
+//                 menuId: _id,
+//                 email: user.email,
+//                 name: productName,
+//                 image: productImage,
+//                 price
+//             };
+//             axiosSecure.post('/carts', cartItem)
+//                 .then(res => {
+//                     if (res.data.insertedId) {
+//                         Swal.fire({
+//                             position: "top-end",
+//                             icon: "success",
+//                             title: `${productName} added to your cart`,
+//                             showConfirmButton: false,
+//                             timer: 1500
+//                         });
+//                         refetch();
+//                     }
+//                 });
+//         } else {
+//             Swal.fire({
+//                 title: "You are not Logged In",
+//                 text: "Please login to add to the cart?",
+//                 icon: "warning",
+//                 showCancelButton: true,
+//                 confirmButtonColor: "#3085d6",
+//                 cancelButtonColor: "#d33",
+//                 confirmButtonText: "Yes, login!"
+//             }).then((result) => {
+//                 if (result.isConfirmed) {
+//                     navigate('/login', { state: { from: location } });
+//                 }
+//             });
+//         }
+//     };
 
 //     return (
 //         <div className="w-full max-w-sm mx-auto bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
@@ -33,10 +84,23 @@
 //                 <div className="text-sm text-gray-600 h-16 overflow-hidden mb-4">
 //                     {description?.slice(0, 80)}...
 //                 </div>
-//                 <div className="card-actions">
-//                     <button className="px-5 py-2 rounded-full text-white font-medium bg-gradient-to-r from-yellow-400 via-yellow-500 to-lime-600 hover:brightness-110 transition">
-//                         Select
-//                     </button>
+//                 <div className="card-actions text-center ml-6.5">
+//                     {/* <button 
+//                         onClick={handleAddToCart}
+//                         className="px-5 py-2 rounded-full text-white font-medium bg-gradient-to-r from-yellow-400 via-yellow-500 to-lime-600 hover:brightness-110 transition"
+//                     >
+//                         Add to Cart
+//                     </button> */}
+//         <button 
+//   onClick={handleAddToCart}
+//   className="flex items-center gap-2 px-6 py-3 rounded-full text-white font-semibold bg-gradient-to-r mx-6.5 from-emerald-800 to-lime-600 hover:from-lime-600 hover:to-green-700 shadow-md hover:shadow-lg transition duration-300"
+// >
+//   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+//     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m5-9v9m4-9v9m4-9l2 9" />
+//   </svg>
+//   Add to Cart
+// </button>
+
 //                 </div>
 //             </div>
 //         </div>
@@ -44,14 +108,20 @@
 // };
 
 // export default ProductData;
+
+
+
 import React from 'react';
 import Swal from "sweetalert2";
 import useAuth from '../Hooks/useAuth';
 import { useLocation, useNavigate } from "react-router-dom";
 import useAxiosSecure from '../Hooks/useAxiosSecure';
 import useCart from '../Hooks/useCart';
+import { useTranslation } from 'react-i18next';
 
 const ProductData = ({ data }) => {
+    const { t } = useTranslation(); // 👈 multi-language hook
+
     const {
         availableQuantity,
         description,
@@ -86,7 +156,7 @@ const ProductData = ({ data }) => {
                         Swal.fire({
                             position: "top-end",
                             icon: "success",
-                            title: `${productName} added to your cart`,
+                            title: `${productName} ${t("cartAdded")}`,
                             showConfirmButton: false,
                             timer: 1500
                         });
@@ -95,13 +165,13 @@ const ProductData = ({ data }) => {
                 });
         } else {
             Swal.fire({
-                title: "You are not Logged In",
-                text: "Please login to add to the cart?",
+                title: t("notLoggedIn"),
+                text: t("pleaseLoginAddCart"),
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#3085d6",
                 cancelButtonColor: "#d33",
-                confirmButtonText: "Yes, login!"
+                confirmButtonText: t("yesLogin")
             }).then((result) => {
                 if (result.isConfirmed) {
                     navigate('/login', { state: { from: location } });
@@ -121,31 +191,24 @@ const ProductData = ({ data }) => {
             </figure>
             <div className="p-6 text-center">
                 <h2 className="text-xl font-semibold text-gray-800 uppercase mb-1">{productName}</h2>
-                <p className="text-sm text-gray-500 mb-3">By: {authorName}</p>
+                <p className="text-sm text-gray-500 mb-3">{t("by")} {authorName}</p>
                 <div className="flex justify-center items-center space-x-3 text-sm mb-4">
-                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full">In Stock: {availableQuantity}</span>
+                    <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full">{t("inStock")}: {availableQuantity}</span>
                     <span className="text-yellow-600 font-bold text-lg">${price}</span>
                 </div>
                 <div className="text-sm text-gray-600 h-16 overflow-hidden mb-4">
                     {description?.slice(0, 80)}...
                 </div>
                 <div className="card-actions text-center ml-6.5">
-                    {/* <button 
+                    <button 
                         onClick={handleAddToCart}
-                        className="px-5 py-2 rounded-full text-white font-medium bg-gradient-to-r from-yellow-400 via-yellow-500 to-lime-600 hover:brightness-110 transition"
+                        className="flex items-center gap-2 px-6 py-3 rounded-full text-white font-semibold bg-gradient-to-r mx-6.5 from-emerald-800 to-lime-600 hover:from-lime-600 hover:to-green-700 shadow-md hover:shadow-lg transition duration-300"
                     >
-                        Add to Cart
-                    </button> */}
-        <button 
-  onClick={handleAddToCart}
-  className="flex items-center gap-2 px-6 py-3 rounded-full text-white font-semibold bg-gradient-to-r mx-6.5 from-emerald-800 to-lime-600 hover:from-lime-600 hover:to-green-700 shadow-md hover:shadow-lg transition duration-300"
->
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m5-9v9m4-9v9m4-9l2 9" />
-  </svg>
-  Add to Cart
-</button>
-
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9m5-9v9m4-9v9m4-9l2 9" />
+                        </svg>
+                        {t("addToCart")}
+                    </button>
                 </div>
             </div>
         </div>
@@ -153,3 +216,4 @@ const ProductData = ({ data }) => {
 };
 
 export default ProductData;
+
