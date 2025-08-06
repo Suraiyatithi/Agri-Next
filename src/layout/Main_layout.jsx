@@ -17,6 +17,7 @@ import TipsCarousel from '../home/Tips';
 import HomeFeatures from '../home/Homefeatures';
 import Combo from '../home/Combo';
 import ReviewsSection from '../home/ReviewSection';
+import WeatherSuggestion from '../home/OpenWeather';
 
 
 const Main_layout = () => {
@@ -27,10 +28,12 @@ const Main_layout = () => {
              <HeroSection></HeroSection>
              {/* <WeatherCard></WeatherCard>
              <TipsCarousel></TipsCarousel> */}
-             <Combo></Combo>
+             <WeatherSuggestion></WeatherSuggestion>
           <Chatbot></Chatbot>
           <HomeFeatures></HomeFeatures>
             <ChooseUs></ChooseUs>
+
+
         <Offer></Offer>
             <LatestProject></LatestProject>
             <ReviewsSection></ReviewsSection>

@@ -1,11 +1,13 @@
 
+
 // import { useState, useRef, useEffect } from "react";
 // import chatbotKnowledge from "./Chatbot";
-// import { Bot, User } from "lucide-react"; // optional icons
+// import { Bot, User } from "lucide-react";
 
 // const Chatbot = () => {
 //   const [messages, setMessages] = useState([]);
 //   const [input, setInput] = useState("");
+//   const [language, setLanguage] = useState("en"); // 🌐 Language state
 //   const messagesEndRef = useRef(null);
 
 //   const handleSend = () => {
@@ -18,7 +20,12 @@
 //     };
 
 //     const lowerInput = input.toLowerCase();
-//     const botResponse = chatbotKnowledge[lowerInput] || "🌾 Sorry, I don't have an answer for that yet. Try another question!";
+//     const botResponse =
+//       chatbotKnowledge[language][lowerInput] ||
+//       (language === "bn"
+//         ? "🌾 দুঃখিত, আমি এই প্রশ্নের উত্তর জানি না। অনুগ্রহ করে অন্য প্রশ্ন জিজ্ঞাসা করুন!"
+//         : "🌾 Sorry, I don't have an answer for that yet. Try another question!");
+
 //     const botMsg = {
 //       sender: "bot",
 //       text: botResponse,
@@ -29,16 +36,25 @@
 //     setInput("");
 //   };
 
-//   // Auto scroll to latest message
 //   useEffect(() => {
 //     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
 //   }, [messages]);
 
 //   return (
 //     <div className="w-full max-w-md p-4 border rounded-2xl shadow-lg bg-white fixed bottom-4 right-4 z-50 font-sans">
-//       <h2 className="text-2xl font-bold text-lime-800 mb-3 flex items-center gap-2">
-//         🌿 AgriBot
-//       </h2>
+//       <div className="flex justify-between items-center mb-3">
+//         <h2 className="text-2xl font-bold text-lime-800 flex items-center gap-2">
+//           🌿 AgriBot
+//         </h2>
+//         <select
+//           value={language}
+//           onChange={(e) => setLanguage(e.target.value)}
+//           className="border text-sm px-2 py-1 rounded-md focus:outline-none"
+//         >
+//           <option value="en">🌐 English</option>
+//           <option value="bn">🌐 বাংলা</option>
+//         </select>
+//       </div>
 
 //       <div className="h-72 overflow-y-auto border border-gray-200 rounded-lg p-3 bg-gray-50 mb-3 space-y-3 scroll-smooth">
 //         {messages.map((msg, i) => (
@@ -70,13 +86,17 @@
 //           onChange={(e) => setInput(e.target.value)}
 //           onKeyDown={(e) => e.key === "Enter" && handleSend()}
 //           className="flex-grow border border-lime-800 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 transition"
-//           placeholder="Ask something like 'how to grow rice'..."
+//           placeholder={
+//             language === "bn"
+//               ? "কিছু জিজ্ঞাসা করুন যেমন 'ধান কিভাবে চাষ করব'..."
+//               : "Ask something like 'how to grow rice'..."
+//           }
 //         />
 //         <button
 //           onClick={handleSend}
 //           className="bg-lime-800 hover:bg-green-700 transition text-white px-4 py-2 rounded-full font-semibold"
 //         >
-//           Send
+//           {language === "bn" ? "পাঠান" : "Send"}
 //         </button>
 //       </div>
 //     </div>
@@ -85,14 +105,15 @@
 
 // export default Chatbot;
 
+
 import { useState, useRef, useEffect } from "react";
 import chatbotKnowledge from "./Chatbot";
-import { Bot, User } from "lucide-react";
+import { Bot, User, X } from "lucide-react";
 
-const Chatbot = () => {
+const Chatbot = ({ visible, onClose }) => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
-  const [language, setLanguage] = useState("en"); // 🌐 Language state
+  const [language, setLanguage] = useState("en");
   const messagesEndRef = useRef(null);
 
   const handleSend = () => {
@@ -125,20 +146,29 @@ const Chatbot = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  if (!visible) return null;
+
   return (
     <div className="w-full max-w-md p-4 border rounded-2xl shadow-lg bg-white fixed bottom-4 right-4 z-50 font-sans">
+      {/* Header with Close Button */}
       <div className="flex justify-between items-center mb-3">
         <h2 className="text-2xl font-bold text-lime-800 flex items-center gap-2">
           🌿 AgriBot
         </h2>
-        <select
-          value={language}
-          onChange={(e) => setLanguage(e.target.value)}
-          className="border text-sm px-2 py-1 rounded-md focus:outline-none"
-        >
-          <option value="en">🌐 English</option>
-          <option value="bn">🌐 বাংলা</option>
-        </select>
+        <div className="flex items-center gap-2">
+          <select
+            value={language}
+            onChange={(e) => setLanguage(e.target.value)}
+            className="border text-sm px-2 py-1 rounded-md focus:outline-none"
+          >
+            <option value="en">🌐 English</option>
+            <option value="bn">🌐 বাংলা</option>
+          </select>
+          {/* ❌ Close Button */}
+          <button onClick={onClose} className="text-gray-500 hover:text-red-500">
+            <X size={24} />
+          </button>
+        </div>
       </div>
 
       <div className="h-72 overflow-y-auto border border-gray-200 rounded-lg p-3 bg-gray-50 mb-3 space-y-3 scroll-smooth">

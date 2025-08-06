@@ -27,6 +27,8 @@ import OfferPage from "../layout/offerLayout";
 import ShowPayment from "../Page/Dashboard/ShowPayment";
 import ReviewPage from "../Page/Dashboard/ReviewPage";
 import ErrorPage from "../Page/Error";
+import Personalized from "../Page/Personalized/Personalized";
+import SellerProducts from "../Page/Dashboard/SellerProduct";
 
 
 export const router = createBrowserRouter([
@@ -67,6 +69,10 @@ export const router = createBrowserRouter([
         {
           path:'offer',
           element:<OfferPage></OfferPage>
+        },
+        {
+          path:'person',
+          element:<Personalized></Personalized>
         }
     ]
   },
@@ -105,6 +111,10 @@ export const router = createBrowserRouter([
            path: 'review',
            element:<ReviewPage></ReviewPage>
         },
+        {
+          path:'seller-product',
+          element:<SellerProducts></SellerProducts>
+        },
 
 
         // admin routes
@@ -123,7 +133,7 @@ export const router = createBrowserRouter([
         {
           path: 'updateItem/:id',
           element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+          loader: ({params}) => fetch(`https://smart-farming-server.vercel.app/product/${params.id}`)
         },
         {
           path: 'users',
@@ -136,6 +146,10 @@ element:<AdminRoute><ShowPayment></ShowPayment> </AdminRoute>
         {
     path: 'makeseller',
     element: <AdminRoute><MakeSeller></MakeSeller></AdminRoute>
+}
+,{
+  path:'persons',
+  element:<Personalized></Personalized>
 }
 
       ]

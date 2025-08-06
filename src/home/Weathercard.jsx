@@ -66,3 +66,19 @@ const WeatherCard = () => {
 };
 
 export default WeatherCard;
+ // "weather": {
+  //   "title": "Weather Today",
+  //   "location": "Location",
+  //   "humidity": "Humidity",
+  //   "condition": "Condition",
+  //   "cropTip": "Crop Tip",
+  //   "suggestion": "Ideal for paddy transplantation today."
+  // },
+  //   "weather": {
+  //   "title": "আজকের আবহাওয়া",
+  //   "location": "অবস্থান",
+  //   "humidity": "আর্দ্রতা",
+  //   "condition": "আবহাওয়া",
+  //   "cropTip": "ফসল পরামর্শ",
+  //   "suggestion": "আজ ধানের রোপণের জন্য আদর্শ দিন।"
+  // },

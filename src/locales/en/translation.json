@@ -5,6 +5,7 @@
   "products": "Products",
   "offer": "Offer",
   "blog": "Blog",
+    "note": "Draft",
   "add_items": "Add Items",
 "banner": {
   "smart_irrigation_title": "Smart Irrigation",
@@ -169,14 +170,7 @@
 "about": "About Us",
 "services": "Services",
 "contact": "Contact",
-  "weather": {
-    "title": "Weather Today",
-    "location": "Location",
-    "humidity": "Humidity",
-    "condition": "Condition",
-    "cropTip": "Crop Tip",
-    "suggestion": "Ideal for paddy transplantation today."
-  },
+ 
   "tips": {
   "title": "🌾 Smart Farming Tip",
   "tip1": "Use compost to improve soil fertility naturally.",
@@ -185,6 +179,19 @@
   "tip4": "Water plants early in the morning to avoid evaporation.",
   "tip5": "Use drip irrigation to conserve water efficiently."
 }
+
+,
+  "weather": {
+    "heading": "📍 Current Temperature in Dhaka",
+    "loading": "Loading...",
+    "suggestion": {
+      "cold": "Be careful! Suitable crops are wheat or mustard.",
+      "warm": "Perfect! You can cultivate rice, corn, or vegetables.",
+      "hot": "Very hot! Make sure irrigation is proper. Watermelon or pumpkin may be suitable."
+    }
+  }
+
+
 ,
 
   "by": "By",
