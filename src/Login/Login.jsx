@@ -1,106 +1,4 @@
 
-// import { useContext, useEffect, useState } from 'react';
-// import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
-// import { AuthContext } from '../Providers/AuthProvider';
-// import { Link, useLocation, useNavigate } from 'react-router-dom';
-// import Swal from 'sweetalert2'
-// import SocialLogin from '../SocialLogin/SocialLogin';
-// import img1 from '../assets/pngfind.com-hand-holding-png-1711178.png';
-
-// const Login = () => {
-//     const [disabled, setDisabled] = useState(true);
-//     const { signIn } = useContext(AuthContext);
-//     const navigate = useNavigate();
-//     const location = useLocation();
-
-//     const from = location.state?.from?.pathname || "/";
-//     console.log('state in the location login page', location.state)
-
-//     useEffect(() => {
-//         loadCaptchaEnginge(6);
-//     }, [])
-
-//     const handleLogin = event => {
-//         event.preventDefault();
-//         const form = event.target;
-//         const email = form.email.value;
-//         const password = form.password.value;
-//         console.log(email, password);
-//         signIn(email, password)
-//             .then(result => {
-//                 const user = result.user;
-//                 console.log(user);
-//                 Swal.fire({
-//                     title: 'User Login Successful.',
-//                     showClass: {
-//                         popup: 'animate__animated animate__fadeInDown'
-//                     },
-//                     hideClass: {
-//                         popup: 'animate__animated animate__fadeOutUp'
-//                     }
-//                 });
-//                 navigate(from, { replace: true });
-//             })
-//     }
-
-//     const handleValidateCaptcha = (e) => {
-//         const user_captcha_value = e.target.value;
-//         if (validateCaptcha(user_captcha_value)) {
-//             setDisabled(false);
-//         }
-//         else {
-//             setDisabled(true)
-//         }
-//     }
-// //flex-col md:flex-row-reverse
-//     return (
-//         <>
-//             <div className="hero min-h-screen bg-base-200">
-//                 <div className="hero-content flex">
-//                     <div className="text-center md:w-1/2 lg:text-left">
-//                     <img src={img1} alt="" />
-//                         {/* <h1 className="text-5xl font-bold">Login now!</h1> */}
-//                         {/* <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p> */}
-//                     </div>
-//                     <div className="card md:w-1/2 max-w-sm shadow-2xl bg-base-100">
-//                         <form onSubmit={handleLogin} className="card-body">
-//                             <div className="form-control">
-//                                 <label className="label">
-//                                     <span className="label-text">Email</span>
-//                                 </label>
-//                                 <input type="email" name="email" placeholder="email" className="input input-bordered" />
-//                             </div>
-//                             <div className="form-control">
-//                                 <label className="label">
-//                                     <span className="label-text">Password</span>
-//                                 </label>
-//                                 <input type="password" name="password" placeholder="password" className="input input-bordered" />
-//                                 <label className="label">
-//                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-//                                 </label>
-//                             </div>
-//                             <div className="form-control">
-//                                 <label className="label">
-//                                     <LoadCanvasTemplate />
-//                                 </label>
-//                                 <input onBlur={handleValidateCaptcha} type="text" name="captcha" placeholder="type the captcha above" className="input input-bordered" />
-
-//                             </div>
-//                             <div className="form-control mt-6">
-//                                 {/* TODO: apply disabled for re captcha */}
-//                                 <input disabled={false} className="btn bg-lime-800 text-white p-6" type="submit" value="Login" />
-//                             </div>
-//                         </form>
-//                         <p className='px-6'><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
-//                         <SocialLogin></SocialLogin>
-//                     </div>
-//                 </div>
-//             </div>
-//         </>
-//     );
-// };
-
-// export default Login;
 import { useContext, useEffect, useState } from 'react';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import { AuthContext } from '../Providers/AuthProvider';
@@ -193,3 +91,88 @@ const Login = () => {
 };
 
 export default Login;
+// import { useState } from 'react';
+// import { Link } from 'react-router-dom';
+
+// const Login = () => {
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
+
+//   const handleLogin = (e) => {
+//     e.preventDefault();
+//     // Handle login logic here
+//     console.log('Logging in with:', { email, password });
+//   };
+
+//   return (
+//     <div className="min-h-screen flex items-center justify-center bg-green-50 px-4 sm:px-6 lg:px-8">
+//       <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-lg">
+//         <div>
+//           <h2 className="mt-6 text-center text-3xl font-bold text-green-800">Login to AgriNext</h2>
+//           <p className="mt-2 text-center text-sm text-gray-600">
+//             Or&nbsp;
+//             <Link to="/signup" className="font-medium text-green-600 hover:text-green-800">
+//               create a new account
+//             </Link>
+//           </p>
+//         </div>
+//         <form className="mt-8 space-y-6" onSubmit={handleLogin}>
+//           <div className="rounded-md shadow-sm -space-y-px">
+//             <div className="mb-4">
+//               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+//                 Email address
+//               </label>
+//               <input
+//                 id="email"
+//                 name="email"
+//                 type="email"
+//                 autoComplete="email"
+//                 required
+//                 className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+//                 placeholder="you@example.com"
+//                 value={email}
+//                 onChange={(e) => setEmail(e.target.value)}
+//               />
+//             </div>
+
+//             <div className="mb-6">
+//               <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+//                 Password
+//               </label>
+//               <input
+//                 id="password"
+//                 name="password"
+//                 type="password"
+//                 autoComplete="current-password"
+//                 required
+//                 className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:ring-green-600 focus:border-green-600 sm:text-sm"
+//                 placeholder="••••••••"
+//                 value={password}
+//                 onChange={(e) => setPassword(e.target.value)}
+//               />
+//             </div>
+//           </div>
+
+//           <div className="flex items-center justify-between">
+//             <div className="text-sm">
+//               <Link to="/forgot-password" className="font-medium text-green-600 hover:text-green-800">
+//                 Forgot your password?
+//               </Link>
+//             </div>
+//           </div>
+
+//           <div>
+//             <button
+//               type="submit"
+//               className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+//             >
+//               Log in
+//             </button>
+//           </div>
+//         </form>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Login;

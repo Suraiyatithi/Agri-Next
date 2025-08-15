@@ -80,7 +80,7 @@ const seasonalData = [
     },
   ],
 }
-  // Add similar sections for Autumn, Late Autumn, Winter, Spring...
+  //I will  Add similar sections for Autumn, Late Autumn
 ];
 
 const SeasonalCropGuide = () => {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import useAxiosSecure from '../../Hooks/useAxiosSecure'; // adjust path if needed
+import useAxiosSecure from '../../Hooks/useAxiosSecure'; 
 
 const BlogPage = () => {
   const axiosSecure = useAxiosSecure();
