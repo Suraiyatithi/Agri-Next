@@ -35,13 +35,13 @@ const Dashboard = () => {
           <li><NavLink to="/dashboard/seller-product"><FaList /> My Products</NavLink></li>
           <li><NavLink to="/dashboard/addItems"><FaUtensils /> Add New Product</NavLink></li>
           {/* Optional: include user features for sellers too */}
-          <li><NavLink to="/dashboard/cart"><FaShoppingCart /> My Cart ({cart.length})</NavLink></li>
+          {/* <li><NavLink to="/dashboard/cart"><FaShoppingCart /> My Cart ({cart.length})</NavLink></li> */}
           <li><NavLink to="/dashboard/persons"><FaList /> My updates</NavLink></li>
         </>
       ) : (
         <>
           <li><NavLink to="/dashboard/userHome"><FaHome /> User Home</NavLink></li>
-          <li><NavLink to="/dashboard/reservation"><FaCalendar /> Reservation</NavLink></li>
+          {/* <li><NavLink to="/dashboard/reservation"><FaCalendar /> Reservation</NavLink></li> */}
           <li><NavLink to="/dashboard/cart"><FaShoppingCart /> My Cart ({cart.length})</NavLink></li>
           <li><NavLink to="/dashboard/review"><FaAd /> Add a Review</NavLink></li>
           <li><NavLink to="/dashboard/persons"><FaList />My notes</NavLink></li>
